@@ -7,9 +7,8 @@
 |password|string|null: false|
 |username|string|null: false|
 ### Association
-- has_many :groups
 - has_many :massages
-- has_many  :users,  through:  :groups_users
+- has_many  :groups,  through:  :groups_users
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -19,15 +18,14 @@
 ### Association
 - belongs_to :user
 - has_many :massages
-- has_many :groups_users
-- has_many  :groups,  through:  :groups_users
+- has_many  :users,  through:  :groups_users
 
 
 ## groups_uearsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
