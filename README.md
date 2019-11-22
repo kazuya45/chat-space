@@ -7,8 +7,9 @@
 |password|string|null: false|
 |username|string|null: false|
 ### Association
-- has_many :posts
-- has_many :comments
+- has_many :group
+- has_many :massage
+- has_many  :user,  through:  :group_user
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -17,8 +18,9 @@
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :group_usar
-- has_many  :group,  through:  :group_usar
+- has_many :massage
+- has_many :group_user
+- has_many  :group,  through:  :group_user
 
 
 ## group_uearsテーブル
