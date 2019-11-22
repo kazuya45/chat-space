@@ -33,8 +33,8 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|date|null: false, primary_key|
-|message|text|null: false, primary_key|
+|image|date| primary_key|
+|message|text| primary_key|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
