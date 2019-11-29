@@ -3,6 +3,9 @@
 @import "side_bar";
 @import "font-awesome-sprockets";
 @import "./font-awesome";
+@import "config/color";
+@import "user";
+@import "flash";
 .wrapper {
   display: flex;
 }
