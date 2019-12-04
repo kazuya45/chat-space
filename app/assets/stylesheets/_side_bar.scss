@@ -35,14 +35,21 @@
   padding: 20px;
   box-sizing: border-box;
   .group {
+    text-decoration: none;
     box-sizing: border-box;
     padding: 20px 0 40px;
+
     &__name {
       font-size: side_group_name;
+      color: white;
     }
-
-  }&__message {
-    font-size:side_group_message;
+    &__message {
+      font-size:side_group_message;
+      color: white;
+    }
   }
 }
 
+// a {
+//   text-decoration: none;
+// }
